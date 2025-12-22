@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Mail, Linkedin, Phone, Download } from 'lucide-react';
 
 export function Hero() {
     return (
@@ -23,8 +23,38 @@ export function Hero() {
                     Building secure and scalable applications.
                 </p>
 
-                <div className="flex gap-4">
-                    {/* Placeholder for action buttons if needed */}
+                <div className="flex flex-wrap gap-4">
+                    <a
+                        href="mailto:ssiddarthsmallik@gmail.com"
+                        className="flex items-center gap-2 px-5 py-3 bg-zinc-800 rounded-full hover:bg-zinc-700 transition-all hover:scale-105 border border-zinc-700"
+                    >
+                        <Mail size={20} className="text-brand-yellow" />
+                        <span className="text-white font-medium">Email</span>
+                    </a>
+                    <a
+                        href="https://linkedin.com/in/siddarth-s-mallik-ab23aa229"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-5 py-3 bg-zinc-800 rounded-full hover:bg-zinc-700 transition-all hover:scale-105 border border-zinc-700"
+                    >
+                        <Linkedin size={20} className="text-[#0077b5]" />
+                        <span className="text-white font-medium">LinkedIn</span>
+                    </a>
+                    <a
+                        href="tel:+917483780500"
+                        className="flex items-center gap-2 px-5 py-3 bg-zinc-800 rounded-full hover:bg-zinc-700 transition-all hover:scale-105 border border-zinc-700"
+                    >
+                        <Phone size={20} className="text-green-500" />
+                        <span className="text-white font-medium">Phone</span>
+                    </a>
+                    <a
+                        href={`${import.meta.env.BASE_URL}resume.pdf`}
+                        download="Siddarth_Resume.pdf"
+                        className="flex items-center gap-2 px-5 py-3 bg-brand-yellow text-zinc-900 rounded-full hover:bg-yellow-400 transition-all hover:scale-105 font-bold shadow-lg shadow-yellow-500/20"
+                    >
+                        <Download size={20} />
+                        <span>Download CV</span>
+                    </a>
                 </div>
             </motion.div>
 

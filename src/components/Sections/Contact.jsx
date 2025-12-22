@@ -56,8 +56,8 @@ export function Contact() {
             <div className="mt-20 pt-10 border-t border-zinc-800 text-zinc-500 text-sm flex justify-between items-center">
                 <p>© 2025 Siddarth S Mallik</p>
                 <a
-                    href="/resume.pdf"
-                    download
+                    href={`${import.meta.env.BASE_URL}resume.pdf`}
+                    download="Siddarth_Resume.pdf"
                     className="bg-brand-yellow text-brand-dark px-6 py-2 rounded-full font-bold hover:bg-yellow-400 transition-colors inline-block"
                 >
                     Download Resume
